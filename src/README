@@ -1,0 +1,26 @@
+21627873 Hüseyin Berk Yılmaz
+
+BBM 342 - Project 2
+
+to compile C files;
+-> g++ sserver.cpp -o sserver -pthread -lrt
+or,
+-> make
+to run server;
+-> ./sserver -p [port] -s [channel size] -ch1 [channel1 file] -ch2 [channel2 file] -ch3 [channel3 file]
+
+to compile Java Files;
+I used the Intelij IDEA to compile and run, there is a form file for GUI. So that,
+This project will not compile in console because of X11 not supported from console.
+You must ınstall and activate to run project from console.
+
+Intelij IDEA, 
+-> File -> Project Structure 
+Shoul change sdk with 1.8 version of Java, and should change module with 
+"8-Lambdas, type annotations etc."
+-> You must add arguments to run configrations as,
+-> a 0.0.0.0 -p [port] -ch [channel number]
+Note, channel number must 1,2,3.(ch1, ch2, ch3)
+
+Intelij IDEA will compile and run together.
+

@@ -1,11 +1,28 @@
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.border.EtchedBorder;
 import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.*;
-
-import java.nio.charset.StandardCharsets;
 
 
 public class Gui  extends JFrame  {
@@ -20,7 +37,6 @@ public class Gui  extends JFrame  {
     public JTextArea msgArea;
     private boolean connection=false;
     private Client client=null;
-    private Packet packet;
 private String ip,channel;
 public int port;
     public Gui(String ip, int port, String channel) {
@@ -42,7 +58,6 @@ public int port;
     private void closeWindow(){
         if(client!=null)
          //   this.client.closeConnection();
-        this.packet=null;
         this.client=null;
     }
 
