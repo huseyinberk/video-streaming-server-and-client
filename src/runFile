@@ -1,0 +1,3 @@
+
+java Sclient -a 0.0.0.0 -p 15555 -ch 1
+./sserver -p 15555 -s 3 -ch1 short_intro.txt -ch2 short_intro.txt -ch3 short_intro.txt
